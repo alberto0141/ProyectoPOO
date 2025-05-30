@@ -9,7 +9,7 @@ public abstract class Empleado {
     private Date fechaInicio;
     private Date fechaFin;
     private int idEmpleado;
-    private String contraseña;
+    private String contrasena;
 
     // Constructor por defecto
     public Empleado() {
@@ -17,7 +17,7 @@ public abstract class Empleado {
 
     // Constructor con parámetros
     public Empleado(String nombre, String correo, String tipo, int telefono, String horario,
-                    Date fechaInicio, Date fechaFin, int idEmpleado, String contraseña) {
+                    Date fechaInicio, Date fechaFin, int idEmpleado, String contrasena) {
         this.nombre = nombre;
         this.correo = correo;
         this.tipo = tipo;
@@ -26,7 +26,7 @@ public abstract class Empleado {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.idEmpleado = idEmpleado;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
     // Getters
@@ -62,8 +62,8 @@ public abstract class Empleado {
         return idEmpleado;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
     // Setters
@@ -99,11 +99,20 @@ public abstract class Empleado {
         this.idEmpleado = idEmpleado;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContraseña(String contrasena) {
+        this.contrasena = contrasena;
     }
 
-    // Método abstracto que deben implementar las subclases
-    public abstract void mostrarInformacion();
-}
 
+    abstract void consultarTarea();
+
+
+    public void agregarEmpleado() {
+
+    }
+
+    public void cambiarEmpleado() {
+
+    }
+
+ }
